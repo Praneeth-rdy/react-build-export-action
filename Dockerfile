@@ -2,8 +2,8 @@
 FROM node:14-alpine AS deps
 # Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
 
-LABEL "com.github.actions.name"="Next.JS Static Build & Export"
-LABEL "com.github.actions.description"="Build a Next.JS app statically"
+LABEL "com.github.actions.name"="React.js Build & Export"
+LABEL "com.github.actions.description"="Build a react.js application and export it to a specified branch from the same repository"
 LABEL "com.github.actions.icon"="zap"
 LABEL "com.github.actions.color"="green"
 

@@ -1,26 +1,20 @@
 # Trigger the workflow on push or pull request
-on: [push, pull_request]
+name: Build and Export the static build to the `build` branch
+on:
+  push:
+    branches: [ "main" ]
 
 name: Build and export the sample react app
 jobs:
   build-and-export:
-    name: Build and export sample app
+    name: Build and export the sample site to the `sample-site-build` branch
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - name: Build with the latest action rev
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: Build and export with the latest action rev
         uses: praneeth-rdy/react-build-export-action@main
         env:
-          BUILD_ONLY: true
-          BUILD_DIR: sample-react-app
-  build-export-and-deploy:
-    name: Build, export and publish sample site to the `sample-site-build` branch
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - name: Build with the latest action rev
-        uses: praneeth-rdy/react-build-export-action@main
-        env:
-          BUILD_DIR: sample-site
-          PAGES_BRANCH: sample-site-build
+          PROJECT_DIR: sample-site
+          BUILD_BRANCH: sample-site-build
           TOKEN: ${{ secrets.TOKEN }}
