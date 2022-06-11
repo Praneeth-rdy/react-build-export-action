@@ -1,0 +1,12 @@
+# action.yml
+name: 'Hello World'
+description: 'Greet someone and record the time'
+author: 'Praneeth Reddy Kolanu (@praneeth-rdy)'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  # args:
+  #   - ${{ inputs.who-to-greet }}
+branding:
+  icon: 'zap'
+  color: 'green'
