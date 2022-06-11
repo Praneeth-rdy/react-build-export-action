@@ -4,7 +4,6 @@ on:
   push:
     branches: [ "main" ]
 
-name: Build and export the sample react app
 jobs:
   build-and-export:
     name: Build and export the sample site to the `sample-site-build` branch
