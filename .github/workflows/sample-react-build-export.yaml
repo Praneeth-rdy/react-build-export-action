@@ -9,7 +9,8 @@ jobs:
     name: Build and export the sample site to the `sample-site-build` branch
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: checkout
+        uses: actions/checkout@v3
       - name: Build and export with the latest action rev
         uses: praneeth-rdy/react-build-export-action@main
         env:

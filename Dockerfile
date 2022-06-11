@@ -12,7 +12,7 @@ ENV LC_ALL C.UTF-8
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US.UTF-8
 
-# RUN apk add --no-cache libc6-compat git pngcrush jpegoptim
+RUN apk add --no-cache libc6-compat git
 # RUN npm install -g html-minifier-cli uglify-js
 
 # Copies the code file from the action repository to the filesystem path `/` of the container
