@@ -65,7 +65,8 @@ fi
 main() {
     echo "Starting build..."
 
-    remote_repo="https://${TOKEN}@${GITHUB_HOSTNAME}/${TARGET_REPOSITORY}.git"
+    # remote_repo="https://${TOKEN}@${GITHUB_HOSTNAME}/${TARGET_REPOSITORY}.git"
+    remote_repo="https://x-access-token:${TOKEN}@${GITHUB_HOSTNAME}/${TARGET_REPOSITORY}.git"
     # remote_branch=$BUILD_BRANCH
 
     echo "Using yarn $(yarn --version)"
